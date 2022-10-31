@@ -5,6 +5,9 @@
 
 int main()
 {
+    // 从本地文件读测试用例，提交到OJ时去掉下面一行
+    freopen("data/data10.in", "r", stdin);
+
     int n, m, g;    // 分别表示学生人数、分数段个数、需解决的任务编号
     scanf("%d %d %d", &n, &m, &g);
     int student[5002];
@@ -70,7 +73,7 @@ int main()
             ren[r] = -1;
             continue;
         }
-        // printf("\n");
+        printf("\n");
     }
 
     if (g == 0 || g == 2)
@@ -85,7 +88,11 @@ int main()
             double u = max / 50.0;
             for (i = 1; i <= m; i++)
             {
-                ren2[i] = floor(ren2[i] * 1.0 / u);
+                if (ren2[i] == max) {
+                    ren2[i] = 50;
+                } else {
+                    ren2[i] = floor(ren2[i] * 1.0 / u);
+                }
             }
         }
 
