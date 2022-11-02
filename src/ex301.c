@@ -6,7 +6,8 @@
 int main()
 {
     // 从本地文件读测试用例，提交到OJ时去掉下面一行
-    freopen("data/data10.in", "r", stdin);
+    freopen("../data/data10.in", "r", stdin);
+    // freopen("data/data10.in", "r", stdin);
 
     int n, m, g;    // 分别表示学生人数、分数段个数、需解决的任务编号
     scanf("%d %d %d", &n, &m, &g);
