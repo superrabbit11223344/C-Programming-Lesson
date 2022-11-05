@@ -3,19 +3,20 @@
 int main()
 {
     // input
-    int n;
+    int n;      // n表示老师要求的题目个数
     scanf("%d", &n);
 
     int timu[100];
     int i;
+    // 输入老师要求的题号
     for (i = 0; i < n; i++)
         scanf("%d", &timu[i]);
 
-    int m, k;
+    int m, k;   // m表示学生数，k表示老师希望找出刷题最多的k个同学
     scanf("%d%d", &m, &k);
 
-    int sno[100];
-    int done[100];
+    int sno[100];   // 学生的学号，8位数字
+    int done[100];  // 该学生刷过的题目
 
     for (i = 0; i < m; i++)
     {
@@ -88,7 +89,7 @@ int main()
         }
     }
 
-    // paiming
+    // 对学生进行排名
     int paiming[100];
 
     int pm = 1;
@@ -109,20 +110,20 @@ int main()
         }
     }
 
-    // shouji
-    int shouji[100];
+    // result
+    int result[100];
     int kk = 0;
     for (i = 0; i <= m - 1; i++)
         if (paiming[i] <= k)
         {
-            shouji[i] = sno[i];
+            result[i] = sno[i];
             kk = kk + 1;
         }
 
-    // output
+    // 输出结果
     for (i = 0; i <= kk - 2; i++)
-        printf("%d ", shouji[i]);
-    printf("%d\n", shouji[kk - 1]);
+        printf("%d ", result[i]);
+    printf("%d\n", result[kk - 1]);
 
     return 0;
 }
