@@ -3,6 +3,8 @@
 
 int main()
 {
+    freopen("data/ex91.in", "r", stdin);
+
     int music0[100] = {0};
     int n0 = 0;
     scanf("%d ", &n0);
