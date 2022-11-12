@@ -2,7 +2,7 @@
 
 int main()
 {
-    freopen("data/ex89.in", "r", stdin);
+    freopen("../data/ex89.in", "r", stdin);
 
     int n, i, profit, f[105] = {0}, j, k;
 
