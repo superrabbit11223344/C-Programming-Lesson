@@ -1,14 +1,16 @@
 #include <stdio.h>
 
+#define MAX_SIZE 100
+
 int main()
 {
-    freopen("data/ex142.in", "r", stdin);
+    freopen("../data/ex142.in", "r", stdin);
 
     int m, n;
     scanf("%d %d", &m, &n);
     int k;
     scanf("%d", &k);
-    int row[k];
+    int row[MAX_SIZE];
     int i, j, l, s;
     l = 0;
     int temp = 0;
@@ -16,7 +18,7 @@ int main()
     {
         scanf("%d", &row[i]);
     }
-    int matrix[m][n];
+    int matrix[MAX_SIZE][MAX_SIZE];
     for (i = 0; i < m; i++)
     {
         for (j = 0; j < n; j++)
