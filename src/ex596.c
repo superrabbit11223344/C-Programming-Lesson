@@ -10,14 +10,14 @@ char* checkSubstr(char* s1, char* s2) {
     // 对s1排序
     qsort(s1, strlen(s1), sizeof(char), cmp);
     
-    // 比较排序后的s1和子串是否相同即可即可
+    // 比较排序后的s1和子串是否相同即可
     char* pRes = s2;
     while (*pRes != '\0') {
         char subStr[200] = "";
         strncpy(subStr, pRes, strlen(s1));
         qsort(subStr, strlen(subStr), sizeof(char), cmp);
-        int result = strcmp(subStr, s1);
-        if (result == 0) return pRes;
+        int isSame = strcmp(subStr, s1);
+        if (isSame == 0) return pRes;
         pRes++;
     }
     return NULL;
